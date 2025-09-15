@@ -1,4 +1,0 @@
-[build]
-base = "ellty"
-command = "npm run build"
-publish = "ellty/dist"
