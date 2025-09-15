@@ -1,7 +1,5 @@
 /* Import Montserrat font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
-
-/* Main dropdown container */
 .dropdown-container {
     width: 370px;
     margin: 40px auto;
@@ -15,7 +13,6 @@
     box-sizing: border-box;
 }
 
-/* Dropdown header */
 .dropdown-header {
     background: #fff;
     border: 1px solid #ccc;
@@ -28,7 +25,6 @@
     cursor: pointer;
 }
 
-/* Single dropdown menu box - 370×326 */
 .dropdown-menu {
     width: 370px;
     height: 326px;
@@ -36,12 +32,35 @@
     border: 1px solid #ccc;
     border-radius: 6px;
     margin-top: 8px;
-    padding: 0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dropdown-content-wrapper {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll; 
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.dropdown-content::-webkit-scrollbar {
+  display: none;
 }
 
 .label-with-checkbox {
@@ -50,14 +69,13 @@
     align-items: center;
     height: 42px;
     padding: 0 12px;
-    padding-top: 4px;
-    padding-bottom: 4px;
     cursor: pointer;
 }
 
 .divider {
-    border-bottom: 1px solid #e0e0e0;
-    margin: 0;
+    height: 1px;
+    background-color: #e8e8e8;
+    margin: 10px 15px;
 }
 
 .label-with-checkbox input[type="checkbox"] {
@@ -109,13 +127,24 @@
     border-bottom: 2px solid white;
     opacity: 1;
 }
+
+.done-btn-container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    background: #fff;
+    z-index: 10;
+}
+
 .done-btn {
     background: #ffcc00;
     border: none;
     border-radius: 6px;
     width: 340px;
     height: 40px;
-    margin: 15px auto 12px; /* increased top margin for spacing */
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -130,7 +159,6 @@
 .done-btn:hover {
     background: #e6b800;
 }
-
 
 .arrow {
     font-size: 12px;
